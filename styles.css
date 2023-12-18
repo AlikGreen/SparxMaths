@@ -1,0 +1,205 @@
+/* General styles */
+body 
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef4fe;
+}
+
+.nav-bar 
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #4290f2;
+    color: #fff;
+    align-items: center;
+    justify-content: flex-end;
+    height: 54px;
+}
+.nav-bar h1
+{
+    margin-right: auto;
+    font-size: 28px;
+    padding-left: 22px;
+}
+
+.nav-bar nav ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.nav-bar nav ul li 
+{
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-bar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transition: all 0.1s ease-in-out; /* Added ease-in-out for smoother transition */
+}
+
+.nav-bar nav ul li a:hover {
+    transform: scale(1.2); /* Scale to 110% on hover */
+    font-weight: 800;
+}
+
+@keyframes tapEffect {
+    100%, 0% 
+    {
+        transform: scale(1);
+    }
+    50% 
+    {
+        transform: scale(5000) translate(-10%, 0px);
+    }
+
+}
+.home {
+    animation: tapEffect 3s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    z-index: 2;
+  }
+
+
+main 
+{
+    flex: 1;
+    margin: 35px 250px 35px 200px;
+}
+
+/* Game section styles */
+.games 
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-nav ul 
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.game-nav ul li 
+{
+    margin: 8px 0px 8px 0px;
+    display: inline;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+
+    overflow: hidden;
+}
+
+.coloured-edge-games
+{
+    width: 10px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #2179de;
+
+    transform: translate(-25px, 0);
+}
+
+.game-nav ul li a 
+{
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.game-nav ul li p
+{
+    color: #c9d3df;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+h2
+{
+    color: #2e3c71;
+    font-size: 37px;
+    margin: 0px;
+}
+
+.grid-container 
+{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    height: 100%;
+}
+
+.side-bar 
+{
+    background-color: #fff;
+    width: 120px;
+}
+
+.side-bar ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-bar ul li
+{
+    background-color: #eef4fe;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-bar ul li a 
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #3f4e7f;
+}
+
+.side-bar ul li img 
+{
+    
+    height: 34px;
+    aspect-ratio: 1;
+}
+
+.side-bar ul li .coloured-edge 
+{
+    background-color: #2e3c71;
+    width: 5px;
+    height: 120px; /* Ensure the colored edge covers the full height */
+    position: absolute;
+    left: 0;
+    top: 54px;
+}
+  

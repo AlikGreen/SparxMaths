@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sparx Maths</title>
+  <link rel="icon" href="https://static.sparxhomework.uk/sw2/e718e999fd27b1082b8bcbbe91810e5ceb55f3af/favicon.ico" sizes="48x48">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav-bar">
+    <h1>Sparx Maths</h1>
+    <nav>
+      <ul>
+        <li><a id="home" href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="grid-container">
+    <nav class="side-bar">
+      <ul>
+        <li>
+            <div class="coloured-edge"></div>
+            <img src="https://pngimg.com/d/star_PNG41505.png">
+            <a href="index.html">Compulsory</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <main>
+      <h2>Hello Student,</h2>
+      <p>This is your personalised Compulsory homework. You need to answer every question correctly to complete it.</p>
+      <section class="games">
+        <nav class="game-nav">
+          <ul>
+            <li>
+                <div class="coloured-edge-games"></div>
+                <a href="Game.html">Homework due Tuesday 2nd January 8am</a>
+                <p>Not started</p>
+            </li>
+            
+          </ul>
+        </nav>
+      </section>
+      <!-- Content or introductory text can go here -->
+    </main>
+  </div>
+
+  <script>
+    const game1Link = document.getElementById('home');
+  
+    game1Link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+  
+      // Add a class to trigger the animation
+      game1Link.classList.add('home');
+  
+      // Remove the class after the animation completes (adjust the time to match the animation duration)
+      setTimeout(() => {
+        game1Link.classList.remove('home');
+      }, 3000); // 3000ms (3 seconds) matches the animation duration
+    });
+  </script>
+</body>
+</html>
